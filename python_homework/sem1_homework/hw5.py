@@ -9,4 +9,8 @@ xA = float(input('Введите координату x точки A: '))
 yA = float(input('Введите координату y точки A: '))
 xB = float(input('Введите координату x точки B: '))
 yB = float(input('Введите координату y точки B: '))
-print('Расстояние между точками равно: %.2f'% math.sqrt((xB - xA)**2 + (yB - yA)**2))
+
+#print('Расстояние между точками равно: %.2f'% math.sqrt((xB - xA)**2 + (yB - yA)**2))
+
+distance = math.sqrt((xB - xA)**2 + (yB - yA)**2)
+print('Расстояние между точками равно: ', int(distance * 100) / 100)
