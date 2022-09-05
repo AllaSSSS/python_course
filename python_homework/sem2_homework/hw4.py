@@ -7,6 +7,12 @@ from random import randint
 N = int(input('Введите число: '))
 numbers = []
 for i in range(N):
-    numbers.append(randint(-N, N+1))
+    numbers.append(randint(-N, N))
 print(numbers)
 
+product = 1
+with open('file.txt') as file:
+    for i in file:
+        product *= numbers[int(i)]
+
+print(product)
