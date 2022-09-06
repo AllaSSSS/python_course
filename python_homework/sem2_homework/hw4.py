@@ -12,7 +12,7 @@ print(numbers)
 product = 1
 with open('file.txt') as file:
     for pos in file:
-        if int(pos) <= N and int(pos) >= -N:
-            product *= numbers[int(pos)]
-        else: product *= 1
+        i = int(pos)
+        if i < N:
+            product *= numbers[i]
 print(product)
