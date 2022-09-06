@@ -3,7 +3,7 @@
 
 number = input('Введите число: ')
 sum = 0
-for c in number:
-    if c.isdigit():
-        sum += int(c) 
+for i in number:
+    if i.isdigit():
+        sum += int(i) 
 print(int(sum))
