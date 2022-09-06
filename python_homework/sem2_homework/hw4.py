@@ -3,7 +3,6 @@
 #Позиции хранятся в файле file.txt в одной строке одно число.
 
 from random import randint
-
 N = int(input('Введите число: '))
 numbers = []
 for i in range(N):
@@ -12,7 +11,8 @@ print(numbers)
 
 product = 1
 with open('file.txt') as file:
-    for i in file:
-        product *= numbers[int(i)]
-
+    for pos in file:
+        if int(pos) <= N and int(pos) >= -N:
+            product *= numbers[int(pos)]
+        else: product *= 1
 print(product)
