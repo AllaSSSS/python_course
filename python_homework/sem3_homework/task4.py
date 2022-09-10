@@ -4,15 +4,11 @@
 # - 3 -> 11
 # - 2 -> 10
 
-void DecToBinary(int number)
-{
-    string Binary = "";
-    while (number > 0)
-    {
-        Binary = number % 2 + Binary;
-        number /= 2;
-    }
-    Console.WriteLine(Binary);
-}
+def DecToBinary(number):
+    binary = []
+    while number > 0:
+        binary.append(number % 2)
+        number //= 2
+    print(binary)
 
-DecToBinary(10);
+DecToBinary(45)
