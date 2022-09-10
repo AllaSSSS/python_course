@@ -13,4 +13,6 @@ yB = float(input('Введите координату y точки B: '))
 #print('Расстояние между точками равно: %.2f'% math.sqrt((xB - xA)**2 + (yB - yA)**2))
 
 distance = math.sqrt((xB - xA)**2 + (yB - yA)**2)
-print('Расстояние между точками равно: ', int(distance * 100) / 100)
+print(distance)
+#print('Расстояние между точками равно: ', int(distance * 100) / 100)
+print('Расстояние между точками равно: ', math.floor(distance))
