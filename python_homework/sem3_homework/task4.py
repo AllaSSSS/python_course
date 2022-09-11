@@ -4,11 +4,18 @@
 # - 3 -> 11
 # - 2 -> 10
 
-def DecToBinary(number):
-    binary = []
+def DecToBin(number):
+    binary = ''
     while number > 0:
-        binary.append(number % 2)
+        binary += str(number % 2)
         number //= 2
-    print(binary)
+    return binary
 
-DecToBinary(45)
+print(DecToBin(45))
+print(DecToBin(3))
+print(DecToBin(2))
+
+# def DecToBin(n):
+#     if n==0: return ''
+#     else:
+#         return DecToBin(n//2) + str(n%2)

@@ -2,3 +2,13 @@
 # Пример:
 # - для k = 8 список будет выглядеть так:
 #  [-21 ,13, -8, 5, −3, 2, −1, 1, 0, 1, 1, 2, 3, 5, 8, 13, 21] [Негафибоначчи]
+
+double Fibonacci (int n)
+{
+    if (n == 1 || n == 2) return 1;
+    else return Fibonacci(n - 1) + Fibonacci (n - 2);
+}
+
+for (int i = 1; i < 50; i ++)
+{
+    Console.WriteLine($"f({i}) = {Fibonacci(i)}");
