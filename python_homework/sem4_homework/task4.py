@@ -11,6 +11,7 @@ for i in range(k+1):
     coefficients.append(randint(0, 100))
 print(coefficients)
 
+
 polynomials = []
 for i in range(k, 0, -1):
     c = coefficients[i]
@@ -19,3 +20,18 @@ for i in range(k, 0, -1):
 if coefficients[0] != 0: polynomials.append(str(coefficients[0]))
 
 print(" + ".join(polynomials))
+
+with open ("polynomials.txt", "w") as file:
+    file.write(" + ".join(polynomials))
+
+# file = polynomials.txt
+# file = open(polynomials.txt, w)
+# for i in range(k, 0, -1):
+#     c = coefficients[i]
+#     if c != 0:
+#         file.write(str(c) + "*x^" + str(i))
+# if coefficients[0] != 0: file.write(str(coefficients[0]))
+# file(close)
+
+#print(" + ".join(polynomials))
+    
