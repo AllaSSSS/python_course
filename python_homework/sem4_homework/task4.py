@@ -4,34 +4,35 @@
 
 k = int(input("Задайте степень k: "))
 
+import ast
 import random
 from random import randint
 coefficients = []
 for i in range(k+1):
-    coefficients.append(randint(0, 100))
+    coefficients.append(randint(-10, +10))
 print(coefficients)
 
-
-polynomials = []
-for i in range(k, 0, -1):
+output = ""
+for i in range(k, -1, -1):
     c = coefficients[i]
     if c != 0: 
-        polynomials.append(str(c) + "*x^" + str(i))
-if coefficients[0] != 0: polynomials.append(str(coefficients[0]))
+        if output != "": output += (" + " if c > 0 else " - ")
+        else:
+            if c < 0: output += "-"
+        if c != 1 and c != -1: 
+            output += str(abs(c))
+            if i > 0: output += "*"   
+        if i > 0: output += ("x" if i == 1 else "x^" + str(i))
 
-print(" + ".join(polynomials))
+print(output)
 
-with open ("polynomials.txt", "w") as file:
-    file.write(" + ".join(polynomials))
-
-# file = polynomials.txt
-# file = open(polynomials.txt, w)
-# for i in range(k, 0, -1):
+with open ('polynomials.txt', 'w') as file:
+    file.write(output)
+#for i in range(k, 0, -1):
 #     c = coefficients[i]
 #     if c != 0:
 #         file.write(str(c) + "*x^" + str(i))
 # if coefficients[0] != 0: file.write(str(coefficients[0]))
 # file(close)
 
-#print(" + ".join(polynomials))
     
