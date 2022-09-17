@@ -8,5 +8,6 @@ def create_poly_file (name):
     number = randint(-10, 10)
     for i in range(degree, 0):
         polynomial.append(str(number) + "*x^" + str(degree))
-    with open ('name', 'w') as file:
-        file.write()
+    
+with open ('name', 'w') as file:
+    file.write()
