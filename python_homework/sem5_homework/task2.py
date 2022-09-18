@@ -24,12 +24,42 @@
 
 # a) Добавьте игру против бота
 
+# from random import randint
+# current_move = randint(0, 1) # 0 - игрок, 1 - бот
+
+# remainder = 57
+# print('Первым будет ходить' + (' игрок' if current_move == 0 else ' компьютер'))
+
+# while True:
+#     player = current_move % 2
+#     if player == 0:
+#         move = int(input('Очередь игрока. Сколько конфет вы возьмете? '))
+#         if move > 28 or move < 1 or move > remainder: 
+#             print('Вы ввели неверное число. Попробуйте еще раз. ')
+#             break
+#         remainder -= move
+#         print('Вы взяли', move, 'конфет(у, ы). Осталось', remainder)
+#         if remainder == 0:
+#             print('Игрок, вы выиграли! Можете забрать все конфеты')
+#             break
+#     else:
+#         move = randint(1, 29)
+#         remainder -= move
+#         print('Компьютер взял ', move, ' конфет(у, ы). Осталось', remainder)
+#         if remainder == 0:
+#             print('К сожалению, вы проиграли')
+#             break
+#     current_move += 1
+
+
+# b) Подумайте как наделить бота "интеллектом"
+
 from random import randint
 current_move = randint(0, 1) # 0 - игрок, 1 - бот
 
 print('Первым будет ходить' + (' игрок' if current_move == 0 else ' компьютер'))
 
-remainder = 57
+remainder = 74
 
 while True:
     player = current_move % 2
@@ -44,13 +74,10 @@ while True:
             print('Игрок, вы выиграли! Можете забрать все конфеты')
             break
     else:
-        bot_move = randint(1, 29)
-        remainder -= bot_move
-        print('Компьютер взял ', bot_move, ' конфет(у, ы). Осталось', remainder)
+        move = max(1, remainder % 29)
+        remainder -= move
+        print('Компьютер взял ', move, ' конфет(у, ы). Осталось', remainder)
         if remainder == 0:
             print('К сожалению, вы проиграли')
             break
     current_move += 1
-
-
-# b) Подумайте как наделить бота "интеллектом"
