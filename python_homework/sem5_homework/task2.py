@@ -27,7 +27,7 @@
 # from random import randint
 # current_move = randint(0, 1) # 0 - игрок, 1 - бот
 
-# remainder = 57
+# remainder = 2021
 # print('Первым будет ходить' + (' игрок' if current_move == 0 else ' компьютер'))
 
 # while True:
@@ -59,7 +59,7 @@ current_move = randint(0, 1) # 0 - игрок, 1 - бот
 
 print('Первым будет ходить' + (' игрок' if current_move == 0 else ' компьютер'))
 
-remainder = 74
+remainder = 2021
 
 while True:
     player = current_move % 2

@@ -1,3 +1,4 @@
+# 1. Напишите программу, удаляющую из текста все слова, содержащие ""абв"".
 import re
 
 def remove_words_with_substring(sentence, substring):
